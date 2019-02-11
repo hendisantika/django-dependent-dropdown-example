@@ -29,14 +29,16 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('birthdate', models.DateField(blank=True, null=True)),
-                ('city', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hr.City')),
                 (
-                'country', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hr.Country')),
+                'city', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='employee.City')),
+                (
+                    'country',
+                    models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='employee.Country')),
             ],
         ),
         migrations.AddField(
             model_name='city',
             name='country',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hr.Country'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='employee.Country'),
         ),
     ]

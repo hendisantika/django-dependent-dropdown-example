@@ -4,8 +4,8 @@ from django.db import migrations
 
 
 def add_initial_data(apps, schema_editor):
-    Country = apps.get_model('hr', 'Country')
-    City = apps.get_model('hr', 'City')
+    Country = apps.get_model('employee', 'Country')
+    City = apps.get_model('employee', 'City')
 
     india = Country.objects.create(name='India')
     City.objects.create(name='Bengaluru', country=india)
@@ -45,7 +45,7 @@ def add_initial_data(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('hr', '0001_initial'),
+        ('employee', '0001_initial'),
     ]
 
     operations = [
