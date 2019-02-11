@@ -18,5 +18,5 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('', RedirectView.as_view(pattern_name='person_changelist'), name='home'),
-    path('hr/', include('hr.urls')),
+    path('hr/', include('employee.urls')),
 ]
