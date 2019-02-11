@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_dependent_dropdown_example',
+    'employee'
 ]
 
 MIDDLEWARE = [
